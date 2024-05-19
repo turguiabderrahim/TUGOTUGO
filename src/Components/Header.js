@@ -136,7 +136,7 @@ const navigation = {
   ],
   pages: [
     { name: 'About', href: 'about' },
-    { name: 'Stores', href: '#' },
+    { name: 'Stores', href: '' },
   ],
 }
 
@@ -276,11 +276,11 @@ export default function Cart({toggleCart}) {
                 <div className="border-t border-gray-200 px-4 py-6">
                   <a href="#" className="-m-2 flex items-center p-2">
                     <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
+                      src="https://tailwindui.com/img/flags/flag-Morocco.svg"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
                     />
-                    <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                    <span className="ml-3 block text-base font-medium text-gray-900">MAD</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
@@ -292,7 +292,7 @@ export default function Cart({toggleCart}) {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-orange-500 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over $100
+          <a href="">Get free delivery on orders over $100</a>
         </p>
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
