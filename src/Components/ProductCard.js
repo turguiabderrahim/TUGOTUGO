@@ -41,9 +41,9 @@ export default function ProductCard({product}) {
 
     return ( 
         <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-            <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
-                <img className="object-cover w-full" src={product.image} alt="product image" />
-                <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">39% OFF</span>
+            <a className="relative mx-3 mt-3 flex-auto overflow-hidden rounded-xl aspect-square" href="#">
+                <img className="object-scale-down w-full h-full p-4" src={product.image} alt="product image" />
+                <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">{product.discount}% OFF</span>
             </a>
             <div className="mt-4 px-5 pb-5">
                 <a href="#">
@@ -52,7 +52,7 @@ export default function ProductCard({product}) {
                 <div className="mt-2 mb-5 flex items-center justify-between">
                 <p>
                     <span className="text-xl font-bold text-slate-900">{product.price}</span>
-                    <span className="text-sm text-slate-900 line-through">$699</span>
+                    <span className="text-sm text-slate-900 line-through">{(product.price - (product.price * product.discount) / 100).toFixed(2)}</span>
                 </p>
                 <div className="flex items-center">
                     <svg aria-hidden="true" className="h-5 w-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@ export default function ProductCard({product}) {
                 </div>
                 <a href="#" 
                     onClick={handleCopyCoupon}
-                    className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                    className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-xs font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
                     >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />

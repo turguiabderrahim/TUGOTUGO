@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import NotFound from "./Pages/NotFound";
 import Layout from "./Components/Layout";
 import './index.css';
+import Login from "./Pages/Login";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
+          <Route path="login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
