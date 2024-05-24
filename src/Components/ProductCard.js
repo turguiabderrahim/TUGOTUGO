@@ -51,7 +51,7 @@ export default function ProductCard({product}) {
                 </a>
                 <div className="mt-2 mb-5 flex items-center justify-between">
                 <p>
-                    <span className="text-xl font-bold text-slate-900">{product.price}</span>
+                    <span className="text-xl font-bold text-slate-900">{product.price}$</span>
                     <span className="text-sm text-slate-900 line-through">{(product.price - (product.price * product.discount) / 100).toFixed(2)}$</span>
                 </p>
                 <div className="flex items-center">
