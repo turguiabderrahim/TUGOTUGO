@@ -11,7 +11,9 @@ export default function Home() {
     try {
       const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:iDNrOW_s/products');
       const data = await response.json();
-      setProducts(data);
+      const sortedData = data.sort((a, b) => b.id - a.id); // Sorting data from largest ID to smallest ID
+      setProducts(sortedData);
+      // setProducts(data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
