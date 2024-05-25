@@ -31,6 +31,7 @@ export default function Home() {
       <Carousel arrows infinite autoplay>
           <img src={isMobile ? "/slide_mobile.jpg" : "/slide.jpeg"} alt="carousel image" />
           <img src={isMobile ? "/slide_mobile.jpg" : "/slide.jpeg"} alt="carousel image" />
+          <img src={isMobile ? "/BD.jpg" : "/BD.jpeg"} alt="carousel image" />
       </Carousel>
       <ProductsSection products={products} />
       <ToastContainer />
