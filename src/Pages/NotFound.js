@@ -1,5 +1,6 @@
 // NotFound.js
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const NotFound = () => {
   return (
@@ -20,9 +21,9 @@ const NotFound = () => {
                         <span>Go back</span>
                     </button>
 
-                    <button className="w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto">
+                    <Link to="/"><button className="w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto">
                         Take me home
-                    </button>
+                    </button></Link>
                 </div>
             </div>
 

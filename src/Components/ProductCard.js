@@ -41,8 +41,8 @@ export default function ProductCard({product}) {
 
     return ( 
         <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-            <a className="relative mx-3 mt-3 flex-auto overflow-hidden rounded-xl aspect-square" href="#">
-                <img className="object-scale-down w-full h-full p-4" src={product.image} alt="product image" />
+            <a className="relative mx-3 mt-3 flex-auto overflow-hidden rounded-xl aspect-square" target="_blank" href={product.Link}>
+                    <img className="object-scale-down w-full h-full p-4" src={product.image} alt="product image" />
                 <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">{product.discount}% OFF</span>
             </a>
             <div className="mt-4 px-5 pb-5">
