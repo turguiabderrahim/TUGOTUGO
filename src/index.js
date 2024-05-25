@@ -8,6 +8,7 @@ import NotFound from "./Pages/NotFound";
 import Layout from "./Components/Layout";
 import './index.css';
 import Login from "./Pages/Login";
+import Signup  from "./Pages/Signup";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
+          <Route path="Signup" element={<Signup />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

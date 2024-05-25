@@ -10,7 +10,6 @@ export default function Home() {
   const fetchData = async () => {
     try {
       const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:iDNrOW_s/products');
-      //const response = await fetch('https://fakestoreapi.com/products');
       const data = await response.json();
       const sortedData = data.sort((a, b) => b.id - a.id); // Sorting data from largest ID to smallest ID
       setProducts(sortedData);

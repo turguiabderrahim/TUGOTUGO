@@ -408,7 +408,7 @@ export default function Cart({toggleCart}) {
                     Sign in
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a href="/signup" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <a href="/Signup" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Create account
                   </a>
                 </div>

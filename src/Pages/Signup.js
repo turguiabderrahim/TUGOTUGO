@@ -1,4 +1,40 @@
-export default function Login() {
+import React from "react";
+import { Fragment, useState } from 'react'
+
+
+export default function Signup() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Create an object with the form data
+    const formData = { email, password };
+
+    try {
+      // Send the form data to the server
+      const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:iDNrOW_s/postes/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Handle successful response
+        const result = await response.json();
+        console.log('Success:', result);
+      } else {
+        // Handle error response
+        console.error('Error:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+
     return (
       <>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -10,12 +46,12 @@ export default function Login() {
             /> */}
             <p className='text-4xl text-center text-orange-500 font-extrabold uppercase'>Tugo</p>
             <h2 className="mt-2 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Sign in to Your Account
+              Create Your Account
             </h2>
           </div>
   
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-6" action="#" method="POST">
+            <form className="space-y-6" action="https://x8ki-letl-twmt.n7.xano.io/api:iDNrOW_s/postes" method="POST">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                   Email address
@@ -37,11 +73,11 @@ export default function Login() {
                   <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
                     Password
                   </label>
-                  <div className="text-sm">
+                  {/* <div className="text-sm">
                     <a href="#" className="font-semibold text-orange-500 hover:text-indigo-500">
                       Forgot password?
                     </a>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="mt-2">
                   <input
@@ -68,7 +104,7 @@ export default function Login() {
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?{' '}
               <a href="#" className="font-semibold leading-6 text-orange-500 hover:text-indigo-500">
-                Start a 14 day free trial
+                Start a 14 day with free shipping
               </a>
             </p>
           </div>

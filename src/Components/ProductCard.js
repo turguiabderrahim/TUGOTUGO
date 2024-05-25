@@ -46,7 +46,7 @@ export default function ProductCard({product}) {
                 <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">{product.discount}% OFF</span>
             </a>
             <div className="mt-4 px-5 pb-5">
-                <a href="#">
+                <a className="relative mx-3 mt-3 flex-auto overflow-hidden rounded-xl aspect-square" target="_blank" href={product.Link}>
                 <h5 className="text-base tracking-tight text-slate-900">{truncateTitle(product.title)}</h5>
                 </a>
                 <div className="mt-2 mb-5 flex items-center justify-between">
