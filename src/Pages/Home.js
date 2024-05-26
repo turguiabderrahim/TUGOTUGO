@@ -6,7 +6,7 @@ import { useMediaQuery } from '@react-hook/media-query';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
-  
+  const [banners, setBanners] = useState([]);
   const fetchData = async () => {
     try {
       const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:iDNrOW_s/products');
@@ -18,9 +18,20 @@ export default function Home() {
       console.error("Error fetching data:", error);
     }
   };
+
+  const fetchPost = async () => {
+    try {
+      const img = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:iDNrOW_s/banners');
+      const data = await img.json();
+      setBanners(data); 
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
   
   useEffect(() => {
     fetchData();
+    fetchPost();
   }, []);
 
   const isMobile = useMediaQuery('(max-width: 768px)');
@@ -28,9 +39,9 @@ export default function Home() {
   return (
     <div className="container max-w-9xl mx-auto px-4 pb-8" basename="/">
       <Carousel arrows infinite autoplay>
+          <img src={isMobile ? "/slide_mobile3.jpg" : "/silde2.jpeg"} alt="carousel image" />
           <img src={isMobile ? "/slide_mobile.jpg" : "/slide.jpeg"} alt="carousel image" />
-          <img src={isMobile ? "/slide_mobile.jpg" : "/slide.jpeg"} alt="carousel image" />
-          <img src={isMobile ? "/BD.jpg" : "/BD.jpeg"} alt="carousel image" />
+          <img src={isMobile ? "/slide_mobile2.jpg" : "/BD.jpeg"} alt="carousel image" />
       </Carousel>
       <ProductsSection products={products} />
       <ToastContainer />
