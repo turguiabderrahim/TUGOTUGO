@@ -45,6 +45,7 @@ export default function Home() {
           <img src={isMobile ? "/slide_mobile3.jpg" : "/slide2.jpeg" } alt="carousel image" />
           <img src={isMobile ? "/slide_mobile.jpg" : "/slide.jpeg"} alt="carousel image" />
           <img src={isMobile ? "/slide_mobile2.jpg" : "/BD.jpeg"} alt="carousel image" />
+          <img src={isMobile ? "/slide_mobile4.jpg" : "/slide4.jpg" } alt="carousel image" />
       </Carousel>
       <ProductsSection products={products} />
       <ToastContainer />
