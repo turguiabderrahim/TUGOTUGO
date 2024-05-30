@@ -9,17 +9,22 @@ import Layout from "./Components/Layout";
 import './index.css';
 import Login from "./Pages/Login";
 import Signup  from "./Pages/Signup";
+import Policy from "./Pages/Policy";
+
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
           <Route path="Signup" element={<Signup />} />
+          <Route path="Policy" element={<Policy />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

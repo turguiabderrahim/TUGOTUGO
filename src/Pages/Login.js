@@ -3,11 +3,6 @@ export default function Login() {
       <>
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            {/* <img
-              className="mx-auto h-10 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="Your Company"
-            /> */}
             <p className='text-4xl text-center text-orange-500 font-extrabold uppercase'>Tugo</p>
             <h2 className="mt-2 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Sign in to Your Account
