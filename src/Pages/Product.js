@@ -61,7 +61,7 @@ const ProductPage = () => {
 
   if (loading) {
     return (
-      <div className="p-6 bg-gray-100 animate-pulse">
+      <div className="bg-gray-100 animate-pulse">
       <div className="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-gray-300 h-64 w-full rounded-lg"></div>
@@ -84,9 +84,8 @@ const ProductPage = () => {
   }
 
   return (
-    <Fragment>
-      <div className="p-6 bg-gray-100">
-      <div className="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md">
+    <div>
+      <div className="max-w-7xl mx-auto bg-white p-6 rounded-lg border">
         <BreadcrumbComponent />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -142,9 +141,8 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-    </div>
     <ToastContainer />
-    </Fragment>
+    </div>
   );
 };
 
