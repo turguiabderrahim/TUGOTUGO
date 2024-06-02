@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
+import USA from '../images/usa.svg'
 
 const navigation = {
   categories: [
@@ -262,11 +263,11 @@ export default function Cart({toggleCart}) {
                 <div className="border-t border-gray-200 px-4 py-6">
                   <a href="#" className="-m-2 flex items-center p-2">
                     <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
+                      src={USA}
+                      alt={USA}
                       className="block h-auto w-5 flex-shrink-0"
                     />
-                    <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                    <span className="ml-3 block text-base font-medium text-gray-900">USD</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
@@ -403,23 +404,23 @@ export default function Cart({toggleCart}) {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <Link to="/login" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  {/* <Link to="/login" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Sign in
-                  </Link>
+                  </Link> */}
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  {/* <a href="/Signup" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Create account
-                  </a>
+                  </a> */}
                 </div>
 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
                     <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
+                      src={USA}
+                      alt={USA}
                       className="block h-auto w-5 flex-shrink-0"
                     />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
+                    <span className="ml-3 block text-sm font-medium">USD</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
