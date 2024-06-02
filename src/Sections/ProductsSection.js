@@ -166,7 +166,7 @@ export default function ProductsSection({products}) {
           </Dialog>
         </Transition.Root>
 
-        <main className="mx-auto px-4 sm:px-6 lg:px-8">
+        <main className="mx-auto sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-10">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">New Arrivals</h1>
 
@@ -289,7 +289,7 @@ export default function ProductsSection({products}) {
                 ))}
               </form>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:col-span-5">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 lg:col-span-5">
                 {products.map((product) => (
                 <ProductCard key={product.id} product={product} />
                 ))}

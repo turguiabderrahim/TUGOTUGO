@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
 
-   <div className="container max-w-9xl mx-auto px-4 pb-8" basename="/">
+   <div className="container max-w-9xl mx-auto md:px-4 pb-8" basename="/">
       <Carousel  infinite autoplay>
           <img src={isMobile ? "/slide_mobile3.jpg" : "/slide2.jpeg" } alt="carousel image" />
           <img src={isMobile ? "/slide_mobile.jpg" : "/slide.jpeg"} alt="carousel image" />
