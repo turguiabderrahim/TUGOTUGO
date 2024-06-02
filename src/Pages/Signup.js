@@ -1,5 +1,6 @@
 import React from "react";
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
+import { Link } from "react-router-dom";
 
 
 export default function Signup() {
@@ -63,6 +64,8 @@ export default function Signup() {
                     type="email"
                     autoComplete="email"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -86,6 +89,8 @@ export default function Signup() {
                     type="password"
                     autoComplete="current-password"
                     required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -94,6 +99,7 @@ export default function Signup() {
               <div>
                 <button
                   type="submit"
+                  onClick={handleSubmit}
                   className="flex w-full justify-center rounded-md bg-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
                 >
                   Sign in
@@ -102,10 +108,10 @@ export default function Signup() {
             </form>
   
             <p className="mt-10 text-center text-sm text-gray-500">
-              Not a member?{' '}
-              <a href="#" className="font-semibold leading-6 text-orange-500 hover:text-indigo-500">
-                Start a 14 day with free shipping
-              </a>
+              Already have an account?{' '}
+              <Link to="/login" className="font-semibold leading-6 text-orange-500 hover:text-indigo-500">
+                Login
+              </Link>
             </p>
           </div>
         </div>

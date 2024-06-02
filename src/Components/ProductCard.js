@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
-import { Bounce, ToastContainer, toast } from 'react-toastify';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Bounce, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ProductCard({ product }) {
@@ -41,14 +42,14 @@ export default function ProductCard({ product }) {
 
     return (
         <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-            <a className="relative mx-3 mt-3 flex-auto overflow-hidden rounded-xl aspect-square" target="_blank" href={product.Link}>
+            <Link to={"product/"+product.slug} className="relative mx-3 mt-3 flex-auto overflow-hidden rounded-xl aspect-square">
                 <img className="object-scale-down w-full h-full p-4" src={product.image} alt="product image" />
                 <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">{product.discount}% OFF</span>
-            </a>
+            </Link>
             <div className="mt-4 px-5 pb-5">
-                <a className="relative mx-3 mt-3 flex-auto overflow-hidden rounded-xl aspect-square" target="_blank" href={product.Link}>
+                <Link to={"product/"+product.slug} className="relative mx-3 mt-3 flex-auto overflow-hidden rounded-xl aspect-square">
                     <h5 className="text-base tracking-tight text-slate-900">{truncateTitle(product.title)}</h5>
-                </a>
+                </Link>
                 <div className="mt-2 mb-5 flex items-center justify-between">
                     <p>
                         <span className="text-xl font-bold text-slate-900">{(product.price - (product.price * product.discount) / 100).toFixed(2)}$</span>
