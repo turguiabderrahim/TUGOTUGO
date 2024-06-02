@@ -111,7 +111,7 @@ const ProductPage = () => {
             </div>
             <p className="text-gray-500 mb-4">Coupon: {product.coupon}</p>
             <div className="flex space-x-4 mb-6">
-              <a href={product.Link} target="_blank" rel="noreferrer" className="flex items-center cursor-pointer px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 duration-100">
+              <a href={product.link} target="_blank" rel="noreferrer" className="flex items-center cursor-pointer px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 duration-100">
                 <FontAwesomeIcon icon={faAmazon} className="mr-2 text-black" />
                 Buy on Amazon
               </a>
