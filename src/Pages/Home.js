@@ -32,7 +32,7 @@ export default function Home() {
   
   useEffect(() => {
     fetchData();
-    fetchPost();
+    // fetchPost();
   }, []);
 
   const isMobile = useMediaQuery('(max-width: 768px)');

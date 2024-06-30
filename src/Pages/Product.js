@@ -94,10 +94,10 @@ const ProductPage = () => {
                 <img className="object-scale-down w-full h-full p-4 rounded" src={product.image} alt={product.title} />
             </div>
             <div className="flex mt-4 space-x-2">
-              <div className="w-16 h-16 bg-gray-200 rounded-lg"></div>
-              <div className="w-16 h-16 bg-gray-200 rounded-lg"></div>
-              <div className="w-16 h-16 bg-gray-200 rounded-lg"></div>
-              <div className="w-16 h-16 bg-gray-200 rounded-lg"></div>
+              <div className="w-16 h-16 bg-gray-100 rounded-lg"></div>
+              <div className="w-16 h-16 bg-gray-100 rounded-lg"></div>
+              <div className="w-16 h-16 bg-gray-100 rounded-lg"></div>
+              <div className="w-16 h-16 bg-gray-100 rounded-lg"></div>
             </div>
           </div>
           <div>
@@ -105,7 +105,7 @@ const ProductPage = () => {
             <p className="text-gray-500 mb-2">Category: {product.category}</p>
             <p className="text-lg text-gray-700 mb-4">{product.description}</p>
             <div className="flex items-center mb-4">
-              <span className="text-2xl font-semibold text-red-600 mr-2">{(product.price - (product.price * product.discount) / 100).toFixed(2)}$</span>
+              <span className="text-2xl font-semibold text-orange-600 mr-2">{(product.price - (product.price * product.discount) / 100).toFixed(2)}$</span>
               <span className="text-sm text-gray-500 line-through">{product.price}$</span>
               <span className="ml-2 text-green-600">{product.discount}% off</span>
             </div>

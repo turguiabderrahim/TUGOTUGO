@@ -123,7 +123,7 @@ const navigation = {
   ],
   pages: [
     { name: 'About', href: 'about' },
-    { name: 'Stores', href: '#' },
+    { name: 'Stores', href: '/' },
   ],
 }
 
